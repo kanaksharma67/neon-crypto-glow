@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Home, History, Users, RefreshCw, User, Settings, LogOut, Moon, Sun } from 'lucide-react';
+import { Home, History, Users, RefreshCw, User, Settings, LogOut, Moon, Sun, SquareDashed } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
@@ -11,7 +11,8 @@ const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
 
   const navItems = [
-    { icon: Home, label: 'Home', path: '/' },
+    { icon: SquareDashed, label: 'Dashboard', path: '/' },
+    { icon: Home, label: 'Home', path: '/home' },
     { icon: History, label: 'History', path: '/history' },
     { icon: Users, label: 'Split Bill', path: '/split-bill' },
     { icon: RefreshCw, label: 'Convert', path: '/convert' },

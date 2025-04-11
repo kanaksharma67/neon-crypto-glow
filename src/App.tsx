@@ -11,18 +11,18 @@ import MakePayment from "./pages/MakePayment";
 import Convert from "./pages/Convert";
 import SplitBill from "./pages/SplitBill";
 import NotFound from "./pages/NotFound";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+ 
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+        <Route path="/" element={<Dashboard />} />
+
+          <Route path="/home" element={<Home />} />
           <Route path="/history" element={<History />} />
           <Route path="/make-payment" element={<MakePayment />} />
           <Route path="/convert" element={<Convert />} />
@@ -32,8 +32,8 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  //   </TooltipProvider>
+  // </QueryClientProvider>
 );
 
 export default App;
