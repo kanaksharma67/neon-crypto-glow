@@ -156,6 +156,8 @@ export default function Dashboard() {
         </div>
       </ContainerScroll>
 
+      <div>Kanak</div>
+
       {/* Facilities Section */}
       <div className="container relative z-10 mx-auto px-4 py-20">
         <div ref={facilitiesRef} className="max-w-4xl text-center mx-auto">
